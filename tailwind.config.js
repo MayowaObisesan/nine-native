@@ -1,4 +1,5 @@
 const { hairlineWidth } = require('nativewind/theme');
+const {BUTTON_THEME} = require("./lib/constants");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -6,6 +7,10 @@ module.exports = {
   content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
   presets: [require('nativewind/preset')],
   theme: {
+    fontFamily: {
+      Assistant: ["Assistant", "sans-serif"],
+      "Assistant-ExtraBold": ["Assistant-ExtraBold", "serif"],
+    },
     extend: {
       colors: {
         border: 'hsl(var(--border))',
@@ -40,6 +45,43 @@ module.exports = {
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
+        },
+        nine: {
+          DEFAULT: BUTTON_THEME.light.primary,
+          foreground: BUTTON_THEME.light.default,
+        },
+        "base-100": {
+          DEFAULT: 'var(--base-100)',
+          foreground: 'var(--base-100)',
+        },
+        "base-200": {
+          DEFAULT: 'var(--base-200)',
+          foreground: 'var(--base-200)',
+        },
+        "base-300": {
+          DEFAULT: 'var(--base-300)',
+          foreground: 'var(--base-300)',
+        },
+        info: {
+            DEFAULT: 'var(--info)',
+        },
+        success: {
+            DEFAULT: 'var(--success)',
+        },
+        warning: {
+            DEFAULT: 'var(--warning)',
+        },
+        error: {
+            DEFAULT: 'var(--error)',
+        },
+        default: {
+            DEFAULT: 'var(--default)',
+        },
+        neutral: {
+            DEFAULT: 'var(--neutral)',
+        },
+        "base-content": {
+            DEFAULT: 'var(--base-content)',
         },
       },
       borderWidth: {
